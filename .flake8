@@ -1,0 +1,11 @@
+[flake8]
+ignore=E402, E501, A003, W504
+; exclude=email_provider_switcher/tests/__init__.py
+max-complexity=10
+; per-file-ignores=
+;     email_provider_switcher/console.py:B008
+;     email_provider_switcher/console.py:F401
+
+classmethod-decorators =
+    classmethod
+    validator
