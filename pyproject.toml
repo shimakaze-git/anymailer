@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "email-provider-switcher"
+version = "0.1.0"
+description = ""
+authors = ["shimakaze-git <shimakaze.soft+github@googlemail.com>"]
+readme = "README.md"
+packages = [{include = "email_provider_switcher"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
