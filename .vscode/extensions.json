@@ -6,6 +6,13 @@
     "LittleFoxTeam.vscode-python-test-adapter",
     "dongli.python-preview",
     "visualstudioexptteam.vscodeintellicode",
-    "ryanluker.vscode-coverage-gutters"
+    "esbenp.prettier-vscode",
+    "4ops.terraform",
+    "ryanluker.vscode-coverage-gutters",
+    "arjun.swagger-viewer",
+    "mermade.openapi-lint",
+    "42crunch.vscode-openapi",
+    "proohit.openapi-snippets",
+    "streetsidesoftware.code-spell-checker"
   ]
 }

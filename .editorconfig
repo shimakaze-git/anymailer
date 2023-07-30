@@ -1,13 +1,18 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
 root = true
 
+# Unix-style newlines with a newline ending every file
 [*]
 indent_style = space
 end_of_line = lf
-charset = utf-8
-trim_trailing_whitespace = true
 insert_final_newline = true
+trim_trailing_whitespace = true
+charset = utf-8
 
-[*.py]
+[*.{py,toml,rst}]
+indent_style = space
 indent_size = 4
 
 # isort
@@ -20,13 +25,12 @@ ensure_newline_before_comments = True
 [*.md]
 trim_trailing_whitespace = false
 
-[*.{py,toml,rst}]
-indent_style = space
-indent_size = 4
-
-[*.{yml, yaml, json}]
+[*.{tf,tfvars}]
 indent_size = 2
+
+[*.yml,yaml,json]
 indent_style = space
+indent_size = 2
 
 # Tab indentation (no size specified)
 [Makefile]

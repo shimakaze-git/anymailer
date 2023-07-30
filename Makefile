@@ -25,7 +25,7 @@ docs: ## Build and serve the documentation with live reloading on file changes
 
 install: ## Run `poetry install`
 	poetry install
-
+	
 showdeps: ## run poetry to show deps
 	@echo "CURRENT:"
 	poetry show --tree

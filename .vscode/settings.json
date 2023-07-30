@@ -1,37 +1,18 @@
 {
+  "python.testing.pytestArgs": ["tests"],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python.analysis.typeCheckingMode": "strict",
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "python.languageServer": "Pylance",
   "python.analysis.completeFunctionParens": true,
-  "python.analysis.typeCheckingMode": "strict",
   "python.analysis.diagnosticMode": "workspace",
-  "python.analysis.extraPaths": ["/usr/local/lib/python3.10/site-packages/"],
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": false,
-  "python.linting.pycodestyleEnabled": false,
-  "python.linting.flake8Enabled": true,
-  "python.linting.flake8Args": [
-    // "--ignore=E402, E501",
-    // "--exclude="
-  ],
   "python.formatting.provider": "none",
-  // "python.formatting.provider": "autopep8",
-  "python.formatting.blackArgs": [
-    // "--line-length=110"
-  ],
-  // "python.formatting.autopep8Args": [
-  //   "--indent-size=4",
-  //   "--max-line-length",
-  //   "160",
-  //   "--ignore=E402, E501"
-  // ],
-  "python.analysis.diagnosticSeverityOverrides": {
-    // "reportUnusedImport": "information",
-    // "reportMissingImports": "information",
-    // "reportUnknownMemberType": "information",
-    // "reportOptionalCall": "information",
-    // "reportUnknownVariableType": "none",
-    // "reportImportCycles": "information"
-  },
   "[python]": {
     "editor.tabSize": 4,
     "editor.formatOnSave": true,
@@ -39,9 +20,18 @@
     "editor.formatOnType": false,
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
-
-  "python.testing.pytestArgs": ["tests"],
-  "python.testing.unittestEnabled": false,
-  "python.testing.pytestEnabled": true
-  // "python.analysis.typeCheckingMode": "basic"
+  "python.analysis.extraPaths": [
+    "/usr/local/lib/python3.10/site-packages/"
+    // "../backends"
+  ],
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.pycodestyleEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.formatting.autopep8Args": [],
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportUnusedImport": "information",
+    "reportMissingTypeArgument": "none"
+  },
+  "yaml.schemaStore.enable": false
 }

@@ -1,6 +1,6 @@
-FROM python:3.10-rc-slim
+FROM python:3.10-slim
 
-ENV PYTHONPATH /workspaces/email-provider-switcher
+ENV PYTHONPATH /backends
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends --allow-unauthenticated \
@@ -13,14 +13,16 @@ RUN apt-get update \
     build-essential \
     libmariadb-dev \
     && pip install --upgrade pip \
-    && pip install poetry \
-    && pip install --no-cache-dir \
-    black \
-    flake8 \
-    isort \
-    pre-commit \
-    lizard \
-    pyright \
+    && poetry install \
+    # && pip install --no-cache-dir \
+    # autopep8 \
+    # flake8 \
+    # isort \
+    # pre-commit \
+    # lizard \
+    # pyright \
+    # black \
     && apt-get autoremove -y \
     && apt-get clean -y \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && adduser vscode
