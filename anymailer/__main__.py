@@ -3,7 +3,7 @@
 # import yaml
 # import logging
 
-# import click
+import click
 
 # from click import group
 
@@ -28,11 +28,11 @@
 # logging.getLogger("urllib3").setLevel(logging.WARNING)
 
 
-# @click.group()
-# @click.version_option(package_name="anymailer")
-# def cli():
-#     print("cli")
-#     # pass
+@click.group()
+@click.version_option(package_name="anymailer")
+def cli():
+    print("cli")
+    # pass
 
 
 # @cli.command()
@@ -92,5 +92,5 @@
 #     logger.info("All done")
 
 
-# if __name__ == "__main__":
-#     cli(prog_name="anymailer")
+if __name__ == "__main__":
+    cli(prog_name="anymailer")
