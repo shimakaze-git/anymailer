@@ -88,7 +88,7 @@ skips = ['*_test.py', '*/test_*.py']
 
 [tool.pytest.ini_options]
 pythonpath = [
-  "src"
+  "anymailer"
 ]
 # Example
 filterwarnings = [
