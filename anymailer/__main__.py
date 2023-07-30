@@ -2,7 +2,10 @@
 # import sys
 # import yaml
 # import logging
+
 # import click
+
+# from click import group
 
 # import anymailer
 # from anymailer.app import App
@@ -24,19 +27,23 @@
 # # set levels for other modules
 # logging.getLogger("urllib3").setLevel(logging.WARNING)
 
+
 # @click.group()
 # @click.version_option(package_name="anymailer")
 # def cli():
-#     pass
+#     print("cli")
+#     # pass
+
 
 # @cli.command()
 # @click.option("-v", "--verbose", count=True)
 # def version(verbose):
 #     """Displays the version"""
+#     print("verbose", verbose)
+
 #     click.echo("Version: %s" % anymailer.__version__)
 #     if verbose > 0:
 #         click.echo("Author: %s" % anymailer.__author__)
-
 
 # @cli.command()
 # @click.option(
