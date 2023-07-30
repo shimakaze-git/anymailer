@@ -13,7 +13,7 @@ RUN apt-get update \
     build-essential \
     libmariadb-dev \
     && pip install --upgrade pip \
-    && poetry install \
+    && pip install poetry \
     # && pip install --no-cache-dir \
     # autopep8 \
     # flake8 \
