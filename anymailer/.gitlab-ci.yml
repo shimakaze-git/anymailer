@@ -7,7 +7,7 @@ cache:
 
 before_script:
   - export PATH=${PATH}:${HOME}/.local/bin/
-  - python -V # Print out python version for debugging
+  - python -V  # Print out python version for debugging
   - dnf install -y make
   - python -m pip install --user poetry
 

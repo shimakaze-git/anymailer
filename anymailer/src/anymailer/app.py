@@ -4,7 +4,7 @@ logger = logging.getLogger("anymailer")
 
 
 class App:
-    def __init__(self, settings) -> None:  # type: ignore
+    def __init__(self, settings) -> None:
         self.settings = settings
 
     def start(self) -> None:
