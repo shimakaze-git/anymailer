@@ -13,6 +13,8 @@ if sys.stdout.isatty():
 else:
     LOG_FORMAT="%(name)s - %(levelname)s - %(message)s"
 
+print("LOG_FORMAT", LOG_FORMAT)
+
 logging.basicConfig(
     level=getattr(logging, os.getenv("LOGLEVEL", "INFO").upper()),
     format=LOG_FORMAT,
@@ -27,15 +29,23 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 @click.group()
 @click.version_option(package_name="anymailer")
 def cli():
+    print("cli")
     pass
+
+@click.command()
+@click.option('-n', '--name', '--name2', 'name')
+def disp(name):
+    click.echo('name={}'.format(name))
+
 
 @cli.command()
 @click.option("-v", "--verbose", count=True)
 def version(verbose):
     """Displays the version"""
-    click.echo("Version: %s" % anymailer.__version__)
-    if verbose > 0:
-        click.echo("Author: %s" % anymailer.__author__)
+    print("version", anymailer)
+    # click.echo("Version: %s" % anymailer.__version__)
+    # if verbose > 0:
+    #     click.echo("Author: %s" % anymailer.__author__)
 
 
 @cli.command()
@@ -48,7 +58,7 @@ def version(verbose):
 )
 def serve(config_file):
     """Start anymailer in server mode"""
-    
+
     settings = {}
     if config_file:
         try:
@@ -86,4 +96,5 @@ def serve(config_file):
 
 
 if __name__ == "__main__":
+    print("__name__", __name__)
     cli(prog_name="anymailer")

@@ -22,4 +22,6 @@ __version__ = module_metadata["Version"]
 __version_info__ = tuple([int(num) for num in __version__.split(".")])
 
 
+print("__version__", __version__)
+
 all = [app]

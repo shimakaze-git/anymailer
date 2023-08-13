@@ -4,3 +4,6 @@ build
 .ipynb_checkpoints
 .coverage
 .pytest_cache
+
+.pyc
+__pycache__

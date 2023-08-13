@@ -15,3 +15,9 @@ Run `make` for help
     make test                # run pytest with coverage
     make build               # run `poetry build` to build source distribution and wheel
 make pyinstaller # Create a binary executable using pyinstaller
+
+## Run
+
+```bash
+$ poetry run anymailer
+```
