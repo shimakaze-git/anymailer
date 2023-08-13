@@ -30,6 +30,7 @@ anymailer = "anymailer.__main__:cli"
 python = "^3.10.0"
 click = "*"
 ruff = "^0.0.284"
+pre-commit = "^3.3.3"
 
 [tool.poetry.group.test.dependencies]
 bandit = "*"

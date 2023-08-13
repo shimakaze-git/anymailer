@@ -6,7 +6,8 @@ import sys
 import click
 
 import anymailer
-from anymailer.app import App
+
+# from anymailer.app import App
 
 log_format: str = ""
 if sys.stdout.isatty():
@@ -34,14 +35,19 @@ logging.getLogger("urllib3").setLevel(logging.WARNING)
 @click.group()
 @click.version_option(package_name="anymailer")
 def cli():
-    print("cli")
     pass
 
 
-# @click.command()
-# @click.option('-n', '--name', '--name2', 'name')
-# def disp(name):
-#     click.echo('name={}'.format(name))
+@cli.command()
+@click.option("-n", "--name")
+def create(name: str):
+    """create command
+
+    Args:
+        name (str): _description_
+    """
+
+    click.echo("create: %s" % name)
 
 
 @cli.command()
@@ -52,8 +58,8 @@ def version(verbose: int):
     Args:
         verbose (int): _description_
     """
-    print("App", App)
 
+    print("verbose", verbose)
     click.echo("Version: %s" % anymailer.__version__)
 
     if verbose > 0:
@@ -108,5 +114,4 @@ def version(verbose: int):
 
 
 if __name__ == "__main__":
-    print("__name__", __name__)
     cli(prog_name="anymailer")
