@@ -4,6 +4,7 @@ A simple application
 from __future__ import annotations
 
 import sys
+
 from . import app
 
 # TODO: use try/except ImportError when

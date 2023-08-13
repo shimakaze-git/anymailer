@@ -45,7 +45,7 @@ format: ## Formats you code with Black
 	poetry run black .
 
 test: hidden ## run pytest with coverage
-	poetry run pytest -v --cov anymailer
+	poetry run pytest -s -v --cov anymailer
 
 build: install lint test ## run `poetry build` to build source distribution and wheel
 	poetry build

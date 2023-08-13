@@ -13,6 +13,7 @@
     "mermade.openapi-lint",
     "42crunch.vscode-openapi",
     "proohit.openapi-snippets",
-    "streetsidesoftware.code-spell-checker"
+    "streetsidesoftware.code-spell-checker",
+    "njpwerner.autodocstring"
   ]
 }

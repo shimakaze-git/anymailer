@@ -14,6 +14,7 @@ RUN apt-get update \
     libmariadb-dev \
     && pip install --upgrade pip \
     && pip install poetry \
+    # && poetry install \
     # && pip install --no-cache-dir \
     # autopep8 \
     # flake8 \
